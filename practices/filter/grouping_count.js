@@ -1,8 +1,15 @@
 'use strict';
 
 function grouping_count(collection) {
-
-  //在这里写入代码
+  let resultMap = {}
+  collection.forEach(num => {
+    if (resultMap[num] == undefined) {
+      resultMap[num] = 1
+      return;
+    }
+    resultMap[num]++;
+  })
+  return resultMap;
 }
 
 module.exports = grouping_count;
